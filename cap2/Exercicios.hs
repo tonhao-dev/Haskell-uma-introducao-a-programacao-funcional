@@ -43,3 +43,12 @@ isPalindrome xs = xs == reverse xs
 
 sequenceOfNumber :: Int -> (Int, Int, Int, Int)
 sequenceOfNumber x = (x*2, x*3, x*4, x*5)
+
+somar :: Int -> Int -> Int
+somar x y = x + y
+
+adicionarElemento :: [Int] -> Int -> [Int]
+adicionarElemento lista elemento = elemento : lista
+
+maiorQue :: Int -> Int -> Bool
+maiorQue x y = (>) x y
