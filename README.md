@@ -12,5 +12,6 @@ Primeiramente instale o compilador GHC através do link: [documentação](https:
 - `cd '.\Haskell - Introdução ao paradigma funcional\'`
 - `cd .\cap2`
 - `ghci` Este comando inicia o modo interativo da linguagem
-- `:ls <nome-do-arquivo>.hs` compila o arquivo escolhido 
+- `:load <nome-do-arquivo>.hs` compila o arquivo escolhido 
 - A partir desse momento basta executar as funções de sua preferência
+- Para sair do modo ghci use CTRL + d
