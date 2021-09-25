@@ -35,3 +35,12 @@ convertKelvin f Fahrenheit = (f - 32) * 5 / 9 + 273
 convertFahrenheit :: Double -> Temperature -> Double
 convertFahrenheit c Celsius = c * 1.8 + 32
 convertFahrenheit k Kelvin = (k - 273) * 1.8 + 32
+
+-- 3.3)
+data GameOption = Paper | Scissor | Rock deriving Show
+
+gameWinner:: GameOption -> GameOption -> GameOption
+gameWinner Paper Scissor = Scissor
+gameWinner Paper Rock = Paper
+gameWinner Scissor Rock = Rock
+gameWinner x y = x
