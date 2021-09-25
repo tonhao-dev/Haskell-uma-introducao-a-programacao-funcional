@@ -54,3 +54,15 @@ isVowel x (vowel:vowels)
 
 vowels:: String -> String
 vowels xs = [x | x <- xs, isVowel x ['a','e','i','o','u', 'A', 'E', 'I', 'O', 'U']]
+
+-- 3.5
+data ImperialUnit = Inch | Yard | Foot
+
+inchInMeters = 0.0254
+yardInMeters = 0.9144
+footInMeters = 0.3048
+
+convertMeters:: Double -> ImperialUnit -> Double
+convertMeters i Inch = i * inchInMeters
+convertMeters y Yard = i * yardInMeters
+convertMeters f Foot = i * footInMeters
