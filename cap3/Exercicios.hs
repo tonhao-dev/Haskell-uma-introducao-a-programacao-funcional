@@ -44,3 +44,13 @@ gameWinner Paper Scissor = Scissor
 gameWinner Paper Rock = Paper
 gameWinner Scissor Rock = Rock
 gameWinner x y = x
+
+-- 3.4
+isVowel:: Char -> [Char] -> Bool
+isVowel x [] = False
+isVowel x (vowel:vowels) 
+    | x == vowel = True
+    | otherwise = isVowel x vowels
+
+vowels:: String -> String
+vowels xs = [x | x <- xs, isVowel x ['a','e','i','o','u', 'A', 'E', 'I', 'O', 'U']]
