@@ -20,3 +20,18 @@ or' _ _ = Yes
 not' :: Question -> Question
 not' Yes = No
 not' No = Yes
+
+-- 3.2)
+data Temperature = Celsius | Fahrenheit | Kelvin
+
+convertCelsius :: Double -> Temperature -> Double
+convertCelsius f Fahrenheit = (f - 32) / 1.8
+convertCelsius k Kelvin = k - 273
+
+convertKelvin :: Double -> Temperature -> Double
+convertKelvin c Celsius = c + 273
+convertKelvin f Fahrenheit = (f - 32) * 5 / 9 + 273
+
+convertFahrenheit :: Double -> Temperature -> Double
+convertFahrenheit c Celsius = c * 1.8 + 32
+convertFahrenheit k Kelvin = (k - 273) * 1.8 + 32
