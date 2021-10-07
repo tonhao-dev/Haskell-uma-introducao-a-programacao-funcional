@@ -13,3 +13,21 @@ search (Node leftTree value rightTree) searched
     | value == searched = True
     | searched < value  = search leftTree searched
     | otherwise         = search rightTree searched
+
+preOrder :: Tree a -> [a]
+preOrder Null = []
+preOrder (Leaf value) = [value]
+preOrder (Node leftTree value rightTree) =
+    [value] ++ preOrder leftTree ++ preOrder rightTree
+
+inOrder :: Tree a -> [a]
+inOrder Null = []
+inOrder (Leaf value) = [value]
+inOrder (Node leftTree value rightTree) = 
+    inOrder leftTree ++ [value] ++ inOrder rightTree
+
+postOrder :: Tree a -> [a]
+postOrder Null = []
+postOrder (Leaf value) = [value]
+postOrder (Node leftTree value rightTree) =
+    postOrder leftTree ++ postOrder rightTree ++ [value]
