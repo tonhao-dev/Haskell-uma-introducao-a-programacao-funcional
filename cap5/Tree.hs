@@ -17,13 +17,13 @@ leftTree =
         )
 rightTree = 
     Node 
-    (Node 
-        (Null) 
-        54 
-        (Leaf 67)
-    ) 
-    72 
-    (Leaf 76)
+        (Node 
+            (Null) 
+            54 
+            (Leaf 67)
+        ) 
+        72 
+        (Leaf 76)
 tree = Node leftTree 50 rightTree
 
 search :: (Eq a, Ord a) => Tree a -> a -> Bool
